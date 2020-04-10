@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Order {
-    private static final int DISCOUNT_PRICE = 10000;
+    private static final int DISCOUNT_PRICE = 10_000;
     private static final int DISCOUNT_AMOUNT = 10;
     private Map<Menu, Amount> order;
 
