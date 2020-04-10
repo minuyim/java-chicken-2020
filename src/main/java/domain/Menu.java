@@ -13,6 +13,10 @@ public class Menu {
         this.price = price;
     }
 
+    public boolean isChicken() {
+        return category == Category.CHICKEN;
+    }
+
     public int getNumber() {
         return number;
     }
