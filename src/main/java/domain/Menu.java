@@ -21,12 +21,15 @@ public class Menu {
         return amount.multiply(price);
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getNumber() {
         return number;
     }
 
-    @Override
-    public String toString() {
-        return category + " " + number + " - " + name + " : " + price + "원";
+    public int getPrice() {
+        return price;
     }
 }
