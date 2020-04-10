@@ -22,6 +22,6 @@ class OrderTest {
         Menus menus = new Menus();
         menus.addMenu(MenuRepository.findByNumber(1), 10);
         Order order = menus.createOrder();
-        assertThat(order.calculatePrice()).isEqualTo(150_000);
+        assertThat(order.calculatePrice()).isEqualTo(new Price(150_000));
     }
 }

@@ -19,8 +19,8 @@ public class Order {
         }
     }
 
-    public int calculatePrice() {
-        return calculateRawPrice() - calculateDiscountPrice();
+    public Price calculatePrice() {
+        return new Price(calculateRawPrice() - calculateDiscountPrice());
     }
 
     private int calculateRawPrice() {
