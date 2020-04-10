@@ -26,7 +26,7 @@ public class Menu {
     }
 
     public String getCategoryName() {
-        return category.name();
+        return category.getName();
     }
 
     public int getNumber() {

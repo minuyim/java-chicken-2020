@@ -19,6 +19,6 @@ class PriceTest {
     @DisplayName("결제 방식에 따른 최종 결제 가격을 계산할 수 있는 지 테스트")
     void discount() {
         Price price = new Price(100_000);
-        assertThat(price.discount(Payment.CASH)).isEqualTo(95_000);
+        assertThat(price.calculateAfterDiscount(Payment.CASH)).isEqualTo(95_000);
     }
 }

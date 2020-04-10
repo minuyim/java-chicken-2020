@@ -18,13 +18,13 @@ public class MenuDto {
         this.price = price;
     }
 
-    public MenuDto of(Menu menu) {
+    public static MenuDto of(Menu menu) {
         return new MenuDto(menu.getName(), menu.getCategoryName(), menu.getNumber(), menu.getPrice());
     }
 
-    public List<MenuDto> of(List<Menu> menus) {
+    public static List<MenuDto> of(List<Menu> menus) {
         return menus.stream()
-                .map(this::of)
+                .map(MenuDto::of)
                 .collect(Collectors.toList());
     }
 

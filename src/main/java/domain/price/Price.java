@@ -16,7 +16,7 @@ public class Price {
         }
     }
 
-    public int discount(Payment payment) {
+    public int calculateAfterDiscount(Payment payment) {
         return (int) payment.calculateDiscount(price);
     }
 
