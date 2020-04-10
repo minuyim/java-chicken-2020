@@ -17,6 +17,10 @@ public class Menu {
         return category == Category.CHICKEN;
     }
 
+    public int calculatePrice(Amount amount) {
+        return amount.multiply(price);
+    }
+
     public int getNumber() {
         return number;
     }
