@@ -16,6 +16,15 @@ public class ChickenController {
     public void run() {
         OutputView.printMain();
         Command command = Command.findByNumber(InputView.inputCommandNumber());
+        try {
+            execute(command);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            run();
+        }
+    }
+
+    private void execute(Command command) {
         if (command.isOrder()) {
             order();
         }
@@ -31,6 +40,7 @@ public class ChickenController {
         OutputView.printMenus(MenuDto.of(MenuRepository.menus()));
         Menu menu = MenuRepository.findByNumber(InputView.inputMenuNumber());
         table.addMenu(menu, InputView.inputAmountNumber());
+        run();
     }
 
     private void pay() {
@@ -44,5 +54,6 @@ public class ChickenController {
 
         OutputView.printPrice(price.calculateAfterDiscount(payment));
         table.clearMenus();
+        run();
     }
 }
