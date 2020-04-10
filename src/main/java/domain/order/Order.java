@@ -1,8 +1,8 @@
 package domain.order;
 
 import domain.menu.Amount;
-import domain.price.Price;
 import domain.menu.Menu;
+import domain.price.Price;
 
 import java.util.Map;
 import java.util.Objects;

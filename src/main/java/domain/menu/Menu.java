@@ -25,6 +25,10 @@ public class Menu {
         return name;
     }
 
+    public String getCategoryName() {
+        return category.name();
+    }
+
     public int getNumber() {
         return number;
     }

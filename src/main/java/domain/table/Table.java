@@ -32,4 +32,12 @@ public class Table {
     public boolean matchNumber(int number) {
         return this.number == number;
     }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public Menus getMenus() {
+        return menus;
+    }
 }
