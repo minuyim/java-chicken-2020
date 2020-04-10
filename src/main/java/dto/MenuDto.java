@@ -2,27 +2,42 @@ package dto;
 
 import domain.menu.Menu;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class MenuDto {
     private String name;
-    private int amount;
+    private String category;
+    private int number;
     private int price;
 
-    public MenuDto(String name, int amount, int price) {
+    public MenuDto(String name, String category, int number, int price) {
         this.name = name;
-        this.amount = amount;
+        this.category = category;
+        this.number = number;
         this.price = price;
     }
 
     public MenuDto of(Menu menu) {
-        return new MenuDto(menu.getName(), menu.getNumber(), menu.getPrice());
+        return new MenuDto(menu.getName(), menu.getCategoryName(), menu.getNumber(), menu.getPrice());
+    }
+
+    public List<MenuDto> of(List<Menu> menus) {
+        return menus.stream()
+                .map(this::of)
+                .collect(Collectors.toList());
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAmount() {
-        return amount;
+    public String getCategory() {
+        return category;
+    }
+
+    public int getNumber() {
+        return number;
     }
 
     public int getPrice() {
