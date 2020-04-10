@@ -1,6 +1,6 @@
 package dto;
 
-import domain.Menu;
+import domain.menu.Menu;
 
 public class MenuDto {
     private String name;

@@ -1,4 +1,4 @@
-package domain;
+package domain.price;
 
 import java.util.Objects;
 

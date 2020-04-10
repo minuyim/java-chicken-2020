@@ -1,4 +1,6 @@
-package domain;
+package domain.menu;
+
+import domain.order.Order;
 
 import java.util.Collections;
 import java.util.HashMap;

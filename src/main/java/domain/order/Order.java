@@ -1,4 +1,8 @@
-package domain;
+package domain.order;
+
+import domain.menu.Amount;
+import domain.price.Price;
+import domain.menu.Menu;
 
 import java.util.Map;
 import java.util.Objects;
